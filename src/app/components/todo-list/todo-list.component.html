@@ -1,0 +1,10 @@
+<h1>Todo List</h1>
+<h3 class="text-muted">Numero cose da fare: {{ getDaCompletare() }}</h3>
+<div class="list-group">
+  <app-todo-item
+    class="list-group-item"
+    *ngFor="let t of todos"
+    [todo]="t"
+    (onRichiestaCompletamento)="completa($event)"
+  ></app-todo-item>
+</div>
